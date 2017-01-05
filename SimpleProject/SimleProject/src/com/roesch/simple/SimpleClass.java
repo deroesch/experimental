@@ -1,4 +1,4 @@
-package com.roesch.junk;
+package com.roesch.simple;
 
 public class SimpleClass {
 
