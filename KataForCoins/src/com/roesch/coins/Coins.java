@@ -42,6 +42,7 @@ public class Coins {
 	int convertToPennies(final float amount) {
 		assert amount >= 0;
 
+		// Weird math to tweak precision error
 		float product = amount * 1000f / 10f;
 		return (int) (product);
 	}
@@ -54,25 +55,33 @@ public class Coins {
 	int[] convertToCounts(final int pennies) {
 		assert pennies > -1;
 
+		int vQuarter = 25;
+		int vDime = 10;
+		int vNickle = 5;
+
 		int remaining = pennies;
 
-		int[] counts = new int[4]; 
+		int[] counts = new int[4];
 
 		while (true) {
-			if (remaining >= 25) {
+			if (remaining >= vQuarter) {
+				remaining -= vQuarter;
 				counts[quarters]++;
-				remaining -= 25;
 				continue;
-			} else if (remaining >= 10) {
-				counts[dimes]++;
-				remaining -= 10;
-				continue;
-			} else if (remaining >= 5) {
-				counts[nickles]++;
-				remaining -= 5;
-				continue;
-			} else
-				counts[cents] = remaining;
+			} else {
+				if (remaining >= vDime) {
+					remaining -= vDime;
+					counts[dimes]++;
+					continue;
+				} else {
+					if (remaining >= vNickle) {
+						remaining -= vNickle;
+						counts[nickles]++;
+						continue;
+					} else
+						counts[cents] = remaining;
+				}
+			}
 			break;
 		}
 
