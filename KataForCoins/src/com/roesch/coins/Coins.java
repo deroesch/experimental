@@ -25,10 +25,10 @@ public class Coins {
 		assert amount >= 0;
 		System.out.println("Coin Kata for $" + amount);
 
-		int pennies = this.convertToPennies(amount);
+		int pennies = toPennies(amount);
 		System.out.println(pennies);
 
-		int[] counts = this.convertToCounts(pennies);
+		int[] counts = toCounts(pennies);
 		String countsAsString = Arrays.toString(counts);
 		System.out.println(countsAsString);
 
@@ -39,7 +39,7 @@ public class Coins {
 	 * @param amount
 	 * @return
 	 */
-	int convertToPennies(final float amount) {
+	int toPennies(final float amount) {
 		assert amount >= 0;
 
 		// Weird math to tweak precision error
@@ -52,7 +52,7 @@ public class Coins {
 	 * @param pennies
 	 * @return
 	 */
-	int[] convertToCounts(final int pennies) {
+	int[] toCounts(final int pennies) {
 		assert pennies > -1;
 
 		int vQuarter = 25;
