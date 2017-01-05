@@ -78,11 +78,12 @@ public class Coins {
 						remaining -= vNickle;
 						counts[nickles]++;
 						continue;
-					} else
+					} else {
 						counts[cents] = remaining;
+						break;
+					}
 				}
 			}
-			break;
 		}
 
 		return counts;
