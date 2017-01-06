@@ -42,7 +42,9 @@ public class Coins {
 	int toPennies(final float amount) {
 		assert amount >= 0;
 
-		// Weird math to tweak precision error
+		// Weird math here is done to tweak a rounding error. There's probably a
+		// better way to do this. If you leave this out, you sometimes get
+		// x.99999 instead of X+1, which then gets truncated in the cast (int).
 		float product = amount * 1000f / 10f;
 		return (int) (product);
 	}
