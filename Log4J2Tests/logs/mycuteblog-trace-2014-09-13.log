@@ -1,0 +1,12 @@
+[DEBUG] 2014-09-13 19:01:57.486 [main] LogDemo - Hello world - debug log
+[INFO ] 2014-09-13 19:01:57.490 [main] LogDemo - Hello world - info log
+[WARN ] 2014-09-13 19:01:57.490 [main] LogDemo - Hello world - warn log
+[ERROR] 2014-09-13 19:01:57.491 [main] LogDemo - Hello world - error log
+Hello world - debug log
+Hello world - info log
+Hello world - warn log
+Hello world - error log
+Hello world - debug log
+Hello world - info log
+Hello world - warn log
+Hello world - error log
