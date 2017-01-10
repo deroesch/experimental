@@ -14,7 +14,7 @@ import javax.json.JsonWriter;
  * @author D. Roesch
  * 
  */
-public class HelloWorld {
+public class Main {
 
 	/**
 	 * Entry point
@@ -24,7 +24,7 @@ public class HelloWorld {
 	 */
 	public static void main(final String[] args) {
 		try {
-			new HelloWorld().run();
+			new Main().run();
 		} catch (final Exception e) {
 			e.printStackTrace();
 		}
